@@ -11,12 +11,12 @@ public class EmployeeInfo {
   }
   private void setName(){
 
-    StringBuilder name2 = null;
+    StringBuilder name2 = new StringBuilder();
     name2.append(inputName());
+    this.name = name2;
+    if(checkName(name)){
 
-    if(checkName(name2)){
-
-      createEmployeeCode(name2);
+      createEmployeeCode(name);
 
     }else{
 
@@ -33,13 +33,13 @@ public class EmployeeInfo {
   }
   private void createEmployeeCode(StringBuilder name){
     this.name = name;
-    int i = name.indexOf(" ");
+    int i = name.lastIndexOf(" ");
     StringBuilder username = name;
-    this.code = username.delete(1, i).toString();
+    this.code = username.delete(1, ++i).toString();
 
   }
   private boolean checkName(StringBuilder name){
-    int i = name.indexOf(" ");
+    int i = name.lastIndexOf(" ");
     if (i > -1){
       return true;
     }else{

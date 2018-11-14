@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -9,7 +10,8 @@ public class ProductionLineDriver {
 
     Product.print();
     EmployeeInfo employee = new EmployeeInfo();
-    employee.getCode();
+
+    System.out.println(employee.getCode());
 
   }
 }
