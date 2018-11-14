@@ -7,9 +7,9 @@ public interface Item {
 
   void setProductionNumber(int productionNumber);
 
-  void setName(String Name);
-
   String getName();
+
+  void setName(String Name);
 
   Date getManufactureDate();
 

@@ -2,10 +2,10 @@ public enum MonitorType {
   LCD("LCD"),
   LED("LED");
 
-  String TypeName;
+  String typeName;
 
   MonitorType(String name) {
-    this.TypeName = name;
+    this.typeName = name;
   }
 }
 

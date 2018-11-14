@@ -1,55 +1,68 @@
 import java.util.Scanner;
 
 public class EmployeeInfo {
+
   private StringBuilder name;
   private String code;
-  public StringBuilder getName(){
+
+  //Constructor Runs setName()
+  public EmployeeInfo() {
+  //Constructor Runs setName()
+    setName();
+
+  }
+  //unused getName() returns a String (employee name)
+  public StringBuilder getName() {
     return this.name = null;
   }
-  public String getCode(){
+
+  //getCode returns a String (employee code)
+  public String getCode() {
     return this.code;
   }
-  private void setName(){
+
+  private void setName() {
 
     StringBuilder name2 = new StringBuilder();
     name2.append(inputName());
     this.name = name2;
-    if(checkName(name)){
+    if (checkName(name)) {
 
       createEmployeeCode(name);
 
-    }else{
+    } else {
 
       this.code = "Guest";
 
     }
 
   }
-  private String inputName(){
+
+  // takes user input to get name, and returns it as a string
+  private String inputName() {
     Scanner scanner = new Scanner(System.in);
     System.out.println("please enter name");
     String nameInput = scanner.nextLine();
     return nameInput;
   }
-  private void createEmployeeCode(StringBuilder name){
+
+  //creates an employee code from name by editing a StringBuilder
+  private void createEmployeeCode(StringBuilder name) {
+
     this.name = name;
     int i = name.lastIndexOf(" ");
     StringBuilder username = name;
     this.code = username.delete(1, ++i).toString();
 
   }
-  private boolean checkName(StringBuilder name){
+
+  // checks to see if an inputted StringBuilder contains a space
+  private boolean checkName(StringBuilder name) {
     int i = name.lastIndexOf(" ");
-    if (i > -1){
+    if (i > -1) {
       return true;
-    }else{
+    } else {
       return false;
     }
-  }
-
-  public EmployeeInfo() {
-
-    setName();
-
   }
 }

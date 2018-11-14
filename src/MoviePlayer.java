@@ -1,9 +1,19 @@
-import java.util.Comparator;
-
 public class MoviePlayer extends Product implements MultimediaControl {
 
   Screen screenType;
   MonitorType monitorType;
+
+  public MoviePlayer(String Name, MonitorType monitorType, Screen screenType) {
+    super(Name);
+    this.monitorType = monitorType;
+    this.screenType = screenType;
+  }
+
+  public MoviePlayer() {
+    super();
+    this.screenType = new Screen();
+    this.monitorType = null;
+  }
 
   @Override
   public void play() {
@@ -23,18 +33,6 @@ public class MoviePlayer extends Product implements MultimediaControl {
   @Override
   public void next() {
     System.out.println("Next Movie");
-  }
-
-  public MoviePlayer(String Name, MonitorType monitorType, Screen screenType) {
-    super(Name);
-    this.monitorType = monitorType;
-    this.screenType = screenType;
-  }
-
-  public MoviePlayer() {
-    super();
-    this.screenType = new Screen();
-    this.monitorType = null;
   }
 
 

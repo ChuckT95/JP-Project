@@ -1,7 +1,7 @@
-
 public class ProductMain {
 
   public static void main(String[] args) {
+    // this is just a tester for watchamacallit which tests product
     Watchamacallit thingamabob = new Watchamacallit("Didgeridoo");
     Watchamacallit thingamajig = new Watchamacallit("Mystery Machine");
 

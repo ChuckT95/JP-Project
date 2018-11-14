@@ -1,10 +1,7 @@
-import java.sql.SQLOutput;
-import java.util.Collections;
-import java.util.Comparator;
-
 public class ProductionLineDriver {
 
   public static void main(String args[]) {
+    // this is a tester for MoviePlayer, AudioPlayer, and EmployeeCode
     MoviePlayerDriver.testMoviePlayer();
     PlayerDriver.testPlayer();
 
