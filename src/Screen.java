@@ -34,8 +34,8 @@ public class Screen implements ScreenSpec {
   @Override
   public String toString() {
     return
-        "Resolution : " + resolution + "\n" +
-            "RefreshRate : " + refreshRate + "\n" +
-            "ResponseTime : " + responseTime + "\n";
+        "Resolution : " + resolution + "\n"
+            + "RefreshRate : " + refreshRate + "\n"
+            + "ResponseTime : " + responseTime + "\n";
   }
 }

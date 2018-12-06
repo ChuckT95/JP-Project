@@ -7,14 +7,14 @@ import java.util.List;
 public abstract class Product implements Item, Comparator {
 
 
-  public final Comparator<Product> productNameComparator =
-      (a1, b2) -> a1.productName.compareTo(b2.productName);
   public static List<Product> products = new ArrayList<Product>();
   public static int currentProductionNumber = 1;
   final String manufacturer = "OracleProduction";
   int productionNumber;
   int serialNumber;
   String productName;
+  public final Comparator<Product> productNameComparator =
+      (a1, b2) -> a1.productName.compareTo(b2.productName);
   //here, I have created a value for the date
   Date manufacturedOn;
 
@@ -22,27 +22,34 @@ public abstract class Product implements Item, Comparator {
   //which is a full class that can be used to make objects,
   //and extends this abstract class
   public Product(String name) {
+    //the constructor is declared in "Watchamacallit",
+    //which is a full class that can be used to make objects,
+    //and extends this abstract class
     productName = name;
     serialNumber = currentProductionNumber++;
     this.manufacturedOn = new Date();
     products.add(this);
     sortProducts();
   }
-//Generic constructor
-  public Product() {
+
+  //Generic constructor
+  public Product(){
+    //Generic constructor
     productName = "Generic";
     serialNumber = currentProductionNumber++;
     this.manufacturedOn = new Date();
     products.add(this);
     sortProducts();
   }
-//tester for Product collections
+
+  //tester for Product collections
   public static void print() {
     for (Product product1 : products) {
       System.out.println(product1.toString());
     }
   }
-//attempt to print Product collections based on type
+
+  //attempt to print Product collections based on type
   public static void printType(Product type) {
 
     for (Product product1 : products) {
@@ -85,7 +92,8 @@ public abstract class Product implements Item, Comparator {
         + "Manufactured on :  " + manufacturedOn + "\n"
         + "Product Name :  " + productName + "\n";
   }
-//required for importing collections
+
+  //required for importing collections
   public int compare(Object o1, Object o2) {
     Product a1 = (Product) o1;
     Product b2 = (Product) o2;

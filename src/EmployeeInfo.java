@@ -7,10 +7,10 @@ public class EmployeeInfo {
 
   //Constructor Runs setName()
   public EmployeeInfo() {
-  //Constructor Runs setName()
+    //Constructor Runs setName()
     setName();
-
   }
+
   //unused getName() returns a String (employee name)
   public StringBuilder getName() {
     return this.name = null;
@@ -27,15 +27,10 @@ public class EmployeeInfo {
     name2.append(inputName());
     this.name = name2;
     if (checkName(name)) {
-
       createEmployeeCode(name);
-
     } else {
-
       this.code = "Guest";
-
     }
-
   }
 
   // takes user input to get name, and returns it as a string
@@ -53,7 +48,6 @@ public class EmployeeInfo {
     int i = name.lastIndexOf(" ");
     StringBuilder username = name;
     this.code = username.delete(1, ++i).toString();
-
   }
 
   // checks to see if an inputted StringBuilder contains a space

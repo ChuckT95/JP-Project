@@ -7,7 +7,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
   String audioSpecification;
   ItemType mediaType;
 
-
   //constructor for AudioPlayer
   public AudioPlayer(String name, String audioSpecification, ItemType mediaType) {
     //constructor for AudioPlayer
@@ -15,7 +14,6 @@ public class AudioPlayer extends Product implements MultimediaControl {
     this.audioSpecification = audioSpecification;
     this.mediaType = mediaType;
   }
-
 
   public AudioPlayer() {
     super();
