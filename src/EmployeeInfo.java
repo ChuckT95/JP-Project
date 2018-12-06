@@ -35,9 +35,11 @@ public class EmployeeInfo {
 
   // takes user input to get name, and returns it as a string
   private String inputName() {
+    String nameInput;
     Scanner scanner = new Scanner(System.in);
-    System.out.println("please enter name");
-    String nameInput = scanner.nextLine();
+      System.out.println("please enter name");
+      nameInput = scanner.nextLine();
+
     return nameInput;
   }
 

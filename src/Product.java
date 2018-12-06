@@ -7,7 +7,7 @@ import java.util.List;
 public abstract class Product implements Item, Comparator {
 
 
-  public static List<Product> products = new ArrayList<Product>();
+  public static final ArrayList<Product> products = new ArrayList<Product>();
   public static int currentProductionNumber = 1;
   final String manufacturer = "OracleProduction";
   int productionNumber;
@@ -27,6 +27,7 @@ public abstract class Product implements Item, Comparator {
     //and extends this abstract class
     productName = name;
     serialNumber = currentProductionNumber++;
+    currentProductionNumber++;
     this.manufacturedOn = new Date();
     products.add(this);
     sortProducts();
@@ -68,7 +69,7 @@ public abstract class Product implements Item, Comparator {
 
   // allows the production number to be changed
   public void setProductionNumber(int productionNumber) {
-    productionNumber = this.productionNumber;
+    this.productionNumber = productionNumber;
   }
 
   public String getName() {
@@ -77,7 +78,7 @@ public abstract class Product implements Item, Comparator {
 
   //a get and set for the name
   public void setName(String name) {
-    name = this.productName;
+    this.productName = name;
   }
 
   //a get for the serial number, which is set when the object is made
