@@ -11,7 +11,6 @@ public class Screen implements ScreenSpec {
     this.responseTime = responseTime;
   }
 
-
   public Screen() {
     this.resolution = "Generic";
     this.refreshRate = 0;

@@ -7,7 +7,5 @@ public class ProductMain {
 
     System.out.println(thingamabob.toString());
     System.out.println(thingamajig.toString());
-
-
   }
 }
