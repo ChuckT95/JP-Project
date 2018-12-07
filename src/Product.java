@@ -6,7 +6,7 @@ import java.util.List;
 
 public abstract class Product implements Item, Comparator {
 
-  public static ArrayList<Product> products = new ArrayList<Product>();
+  public static ArrayList<Product> products = new ArrayList();
 
   public static int currentProductionNumber = 1;
   final String manufacturer = "OracleProduction";
@@ -27,10 +27,9 @@ public abstract class Product implements Item, Comparator {
     //and extends this abstract class
     productName = name;
     serialNumber = currentProductionNumber++;
-    currentProductionNumber++;
     this.manufacturedOn = new Date();
     products.add(this);
-    sortProducts();
+    sortProducts(products);
   }
 
   //Generic constructor
@@ -40,7 +39,7 @@ public abstract class Product implements Item, Comparator {
     serialNumber = currentProductionNumber++;
     this.manufacturedOn = new Date();
     products.add(this);
-    sortProducts();
+    sortProducts(products);
   }
 
   //tester for Product collections
@@ -101,11 +100,13 @@ public abstract class Product implements Item, Comparator {
     return a1.productName.compareTo(b2.productName);
   }
 
-  void sortProducts() {
+
+  static void sortProducts(ArrayList<Product> products) {
     Collections.sort(products, new Comparator<Product>() {
       public int compare(Product a1, Product b2) {
         return a1.productName.compareTo(b2.productName);
       }
     });
   }
+
 }

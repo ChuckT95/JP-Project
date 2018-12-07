@@ -2,10 +2,10 @@ public enum ItemType {
 
   //ItemType AUDIO = new ItemType("AU");
 
-  Audio("AU"),
-  Visual("VI"),
-  AudioMobile("AM"),
-  VisualMobile("VM");
+  AUDIO("AU"),
+  VISUAL("VI"),
+  AAUDIOMOBILE("AM"),
+  VISUALMOBILE("VM");
   String TypeName;
 
   ItemType(String name) {

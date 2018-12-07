@@ -13,6 +13,15 @@ public class AudioPlayer extends Product implements MultimediaControl {
     super(name);
     this.audioSpecification = audioSpecification;
     this.mediaType = mediaType;
+
+  }
+
+  //constructor for AudioPlayer
+  public AudioPlayer(String name, String audioSpecification) {
+    //constructor for AudioPlayer
+    super(name);
+    this.audioSpecification = audioSpecification;
+    this.mediaType = ItemType.AUDIO;
   }
 
   public AudioPlayer() {
@@ -36,4 +45,11 @@ public class AudioPlayer extends Product implements MultimediaControl {
     System.out.println("Next");
   }
 
+  @Override
+  public String toString() {
+
+    return super.toString()
+        + "Audio Spec : " + audioSpecification + "\n"
+        + "Type : " + mediaType + "\n";
+  }
 }
