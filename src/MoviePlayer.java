@@ -36,5 +36,4 @@ public class MoviePlayer extends Product implements MultimediaControl {
     System.out.println("Next Movie");
   }
 
-
 }
