@@ -1,7 +1,6 @@
 import java.util.Date;
 
 public interface Item {
-
   // the initial interface with a list of promises to create certain methods, and a final string
   final String Manufacturor = "OracleProduction";
 
@@ -14,6 +13,5 @@ public interface Item {
   Date getManufactureDate();
 
   int getSerialNumber();
-
 
 }

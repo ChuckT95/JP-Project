@@ -6,8 +6,8 @@ import java.util.List;
 
 public abstract class Product implements Item, Comparator {
 
+  public static ArrayList<Product> products = new ArrayList<Product>();
 
-  public static final ArrayList<Product> products = new ArrayList<Product>();
   public static int currentProductionNumber = 1;
   final String manufacturer = "OracleProduction";
   int productionNumber;

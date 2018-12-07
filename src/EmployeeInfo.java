@@ -39,7 +39,6 @@ public class EmployeeInfo {
     Scanner scanner = new Scanner(System.in);
       System.out.println("please enter name");
       nameInput = scanner.nextLine();
-
     return nameInput;
   }
 

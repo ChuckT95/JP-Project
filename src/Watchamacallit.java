@@ -8,9 +8,7 @@ public class Watchamacallit extends Product {
     // put the full constructor in the main abstract class
     //here, is a constructor that does all of the required things. NOTE: there are a ton of comments
     //in this location but CheckStyle does not see them for some reason.
-
     super(input);
-
   }
 
   @Override
