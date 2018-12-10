@@ -6,9 +6,9 @@ public enum ItemType {
   VISUAL("VI"),
   AAUDIOMOBILE("AM"),
   VISUALMOBILE("VM");
-  String TypeName;
+  String typeName;
 
   ItemType(String name) {
-    this.TypeName = name;
+    this.typeName = name;
   }
 }

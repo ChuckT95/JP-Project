@@ -8,7 +8,7 @@ public interface Item {
 
   String getName();
 
-  void setName(String Name);
+  void setName(String name);
 
   Date getManufactureDate();
 

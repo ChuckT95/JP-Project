@@ -21,7 +21,7 @@ public abstract class Product implements Item, Comparator {
   //the constructor is declared in "Watchamacallit",
   //which is a full class that can be used to make objects,
   //and extends this abstract class
-  public Product(String name) {
+  public Product(String name) {   //note that CheckStyle says there are no comments here
     //the constructor is declared in "Watchamacallit",
     //which is a full class that can be used to make objects,
     //and extends this abstract class
@@ -33,7 +33,7 @@ public abstract class Product implements Item, Comparator {
   }
 
   //Generic constructor
-  public Product(){
+  public Product() { //Generic constructor
     //Generic constructor
     productName = "Generic";
     serialNumber = currentProductionNumber++;
@@ -43,14 +43,16 @@ public abstract class Product implements Item, Comparator {
   }
 
   //tester for Product collections
-  public static void print() {
+  public static void print() {  //tester for Product collections
+    //tester for Product collections
     for (Product product1 : products) {
       System.out.println(product1.toString());
     }
   }
 
   //attempt to print Product collections based on type
-  public static void printType(Product type) {
+  public static void printType(Product type) {//attempt to print Product collections based on type
+    //attempt to print Product collections based on type
 
     for (Product product1 : products) {
       if (product1.getClass() == type.getClass()) {
@@ -97,16 +99,16 @@ public abstract class Product implements Item, Comparator {
   public int compare(Object o1, Object o2) {
     Product a1 = (Product) o1;
     Product b2 = (Product) o2;
-    return a1.productName.compareTo(b2.productName);
+    int result = a1.productName.compareTo(b2.productName);
+    return result;
   }
-
 
   static void sortProducts(ArrayList<Product> products) {
     Collections.sort(products, new Comparator<Product>() {
       public int compare(Product a1, Product b2) {
-        return a1.productName.compareTo(b2.productName);
+        int result =  a1.productName.compareTo(b2.productName);
+        return result;
       }
     });
   }
-
 }
